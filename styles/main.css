@@ -1,0 +1,109 @@
+body {
+  background-color: #F0EAD6;
+  font-family: 'Encode Sans Condensed', 'Gill Sans MT', 'Arial', sans-serif;
+  font-size: 1rem;
+}
+header, footer {
+  font-family: 'Rokkitt', 'Palatino Linotype', 'Georgia', serif;
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+header p {
+  font-size: 1.5rem;
+}
+#cowMove{
+  min-height: 700px;
+}
+#chickenMove {
+  min-height: 700px;
+}
+#chickGraphic{
+  height: 200px;
+  width: 225px;
+  margin-top: 100px;
+  margin: auto;
+}
+#cowGraphic{
+  height: 200px;
+  width: 225px;
+  margin-top: 50px;
+  margin: auto;
+}
+.container{
+  padding: 2rem;
+}
+.btn {
+  margin: .5rem;
+}
+.container p {
+  margin: .5rem;
+}
+#introChart{
+  min-width: 250px;
+  height: 325px;
+  margin-top: 1rem;
+}
+#cowChart{
+  min-width: 250px;
+  height: 500px;
+  margin-top: 1rem;
+}
+#pigChart{
+  min-width: 250px;
+  height: 500px;
+  margin-top: 1rem;
+}
+#chickenChart{
+  min-width: 250px;
+  height: 500px;
+  margin-top: 1rem;
+}
+#corn {
+  max-width: 50px;
+  max-height: 80px;
+  margin: .5rem;
+}
+#bacon {
+  max-width: 80px;
+  max-height: 50px;
+  margin: .5rem;
+}
+#pigGraphic{
+  display: block;
+  height: 200px;
+  width: 200px;
+  min-width: 180px;
+  margin: 100px auto;
+}
+#chickenGraphic{
+  height: 200px;
+  width: 150px;
+  margin-top: 100px;
+  margin: auto;
+}
+#egg {
+  max-width: 80px;
+  max-height: 80px;
+  margin: .5rem;
+}
+#tree-graphic{
+  height: 250px;
+  width: 250px;
+  margin: auto;
+}
+#conclusion p{
+  margin-top: 50px;
+}
+#atts{
+  padding: 2rem;
+  margin-left: 1rem;
+  margin: 0 auto;
+  max-width: 700px;
+}
+#atts p{
+  font-weight: bold;
+}

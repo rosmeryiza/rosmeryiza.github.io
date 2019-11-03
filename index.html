@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+  <title>The Real Cost of Eating Meat</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Rokkitt" rel="stylesheet">
+<!-- styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+
+<!-- scripts -->
+  <!-- BootStrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!-- HighCharts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/grid-light.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <h1>The Real Cost of Eating Meat</h1>
+      <p>By Rosmery Izaguirre<p>
+  </header>
+
+    <div id="cowMove" class="container">
+      <div class="row justify-content-md-right">
+        <img id="chickGraphic" class="img-fluid" src="images/chick-graphic-2.png" alt="Chick graphic">
+        <div class="col-sm-12 col-md-4">
+          <p>One of the biggest and increasingly relevant issues in our society is climate change. Perhaps at some point you have taken steps like investing in a reusable straw or water bottle, recycling plastics from your everyday products, or just simply changing the old lightbulbs in your home for energy efficient ones. Another area that can be easily manipulated and make an impactful difference is likely one that affects you every day, several times in the day. Our meat consumption habits can have a massive impact on greenhouse gas emissions. Contrary to common misconceptions, you don't even have to give up meat cold-turkey (pun intended) to make a difference. Keep reading to see how different types of meat production impact the atmosphere through the emissions they release.</p>
+          <!-- <img id="cowGraphic" class="img-fluid" src="images/cow-graphic.png"> -->
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div id="introChart"></div> <!-- HighCharts -->
+          <p>Enteric fermentation refers to the process which animals break down their food. As can be seen by the chart, cows release the most methane making beef production the costliest production type in terms of sustainability.</p>
+        </div> <!-- end col -->
+      </div><!-- end row -->
+    </div> <!-- end container -->
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <img id="cowGraphic" class="img-fluid" src="images/cow-graphic.png" alt="Cow graphic">
+      <div class="col-sm-12 col-md-4">
+        <button type="button" class="btn btn-primary" id="cowProduct">Production</button>
+        <button type="button" class="btn btn-primary" id="cowFeed">Feed</button>
+        <button type="button" class="btn btn-primary" id="cowLand">Land</button>
+        <div id="cowProductText">
+          <p>Despite only making up 10 percent of the global beef cattle population, the largest beef producer in the world is the United States. The efficiency of production in the United States is attributed to the low cost of corn in the US. Brazil is the second largest beef producer in the world.</p>
+          <img id="corn" class="img-fluid" src="images/corn-graphic.png" alt="Corn graphic">
+        </div>
+        <p id="cowFeedText">As stated before, beef production is the costliest meat production in terms of environmental factors. Cattle account for 77 percent of global methane emissions from ruminant animals. Cows require up to five times more feed to produce one kilogram of protein in the form of meat than one kilogram of protein in the form of milk. Feed quality is another factor that can increase the methane emissions if it is neglected, oftentimes in meat manufacturing that can be the case.</p>
+        <p id="cowLandText">Livestock production has been tied to environmental concerns other than greenhouse gas emissions. Deforestation has increased as agriculture practices make space for pasteurs to maintain cattle. Additionally, the rise of fields have discouraged the growth of other native animals to the land.</p>
+      </div> <!-- end col -->
+      <div class="col-sm-12 col-md-4">
+        <div id="cowChart"></div> <!-- HighCharts -->
+      </div> <!-- end col -->
+    </div><!-- end row -->
+  </div> <!-- end container -->
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <button type="button" class="btn btn-primary" id="pigProduct">Production</button>
+        <button type="button" class="btn btn-primary" id="pigFeed">Feed</button>
+        <button type="button" class="btn btn-primary" id="pigLand">Land</button>
+        <div id="pigProductText">
+          <p>Pigs are the most widely consumed meat product in the world. The production of pigs is concentrated in specific regions due to cultural factors, with 95 percent taking place in East and Southeast Asia, Europe and the Americas.</p>
+          <img id="bacon" src="images/bacon-graphic.png" alt="Bacon graphic">
+        </div>
+        <p id="pigFeedText">Uncontrolled feed quality effects the emissions from pork production. The carbon emissions from the pigs themselves and the manure contribute to 81 percent of the total emissions asssociated with pig production. A measure that can reduce the greenhouse gas emissions of pig production is frequent removal of the animal waste.</p>
+        <p id="pigLandText">The production of pig meat can vary slightly in its affect of the land. While it is possible to have pigs in a free range farm, many big farming companies keep pigs in crowded pens. While this does not directly impact the environment, some argue that it affects the quality of life of the animals and protest it for mistreatment and cruelty.</p>
+      </div> <!-- end col -->
+      <div class="col-sm-12 col-md-3">
+        <img id="pigGraphic" class="img-fluid" src="images/pig-graphic.png" alt="Pig in mud graphic">
+      </div>
+      <div class="col-sm-12 col-md-5">
+        <div id="pigChart"></div> <!-- HighCharts -->
+      </div> <!-- end col -->
+    </div><!-- end row -->
+  </div> <!-- end container -->
+
+  <hr>
+
+  <div id="chickenMove" class="container">
+    <div id="scene3" class="row">
+      <div class="col-sm-12 col-md-4">
+        <button type="button" class="btn btn-primary" id="chickenProduct">Production</button>
+        <button type="button" class="btn btn-primary" id="chickenFeed">Feed</button>
+        <button type="button" class="btn btn-primary" id="chickenLand">Land</button>
+        <div id="chickenProductText">
+          <p>Chicken production is widespread globally. As seen in the chart, as emission rates are proportional to production rates, there are high production numbers in Latin America and the Caribbean, North America, and East and Southeast Asia. The highest egg production is accounted for in East and Southeast Asia.</p>
+          <img id="egg" src="images/egg-graphic.png" alt="Egg graphic">
+        </div>
+        <p id="chickenFeedText">Differences in the proportions of feed given to chickens impacts the methane emissions. However, it is important to note that the digestive process of chickens does not nearly compare to that of either cows or pigs. Infact, most emissions are accounted for through the manufacturing process with only about 11 percent of emissions attributed to the waste of the chickens.</p>
+        <p id="chickenLandText">Similarly to pig farming practices, the maintenance routines of big farming companies usually include keeping chickens in close pens, where oftentime they are incapable of moving. There have been more egg products claiming that the chickens are "free range" or "free to roam," however due to regulation specifications, questions have arisen as to whether this could only mean that they are free-range at certain times in the day in a limited space.</p>
+      </div> <!-- end col -->
+      <div class="col-sm-12 col-md-4">
+        <div id="chickenChart"></div> <!-- HighCharts -->
+      </div> <!-- end col -->
+      <!-- <div class="col-sm-12 col-md-3"> -->
+        <img id="chickenGraphic" class="img-fluid" src="images/chicken-graphic.png" alt="Chicken graphic">
+      <!-- </div>  -->
+    </div><!-- end row -->
+  </div> <!-- end container -->
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <img id="treeGraphic" class="img-fluid" src="images/tree-graphic.png" alt="Tree graphic">
+      </div> <!-- end col -->
+      <div id="conclusion" class="col-sm-12 col-md-6">
+        <p>A common pattern in society is to simplify realities and paint things black and white. Whether it's politics, race, or the economy. Society is polarized to the point where small nuances are ignored. But the reality is that progress can be made without going to an extreme. Beef production is expensive when it comes to greenhouse gas emissions, but eating beef is something habitual to most people and it would be a sacrifice to live without it. So instead, it might be better to try to cut-back instead of cutting it out. Try meatless Mondays, or replace your usual burger with a chicken sandwich once in a while. The small steps matter and our individual actions contribute to a collective goal.</p>
+      </div> <!-- end col -->
+    </div><!-- end row -->
+  </div> <!-- end container -->
+
+  <div id="atts">
+    <p id="attributions">Attributions & Licenses</p>
+      <ul>
+        <li>Cow graphic: <a href="https://www.freepik.com/free-photos-vectors/design" target="_blank">Design vector created by Freepik</a></li>
+        <li>Pig and tree graphic: <a href="https://www.freepik.com/free-vector/nice-farm-elements-collection_849517.htm" target="_blank">Designed by Freepik</a></li>
+        <li>Chicken graphic: <a href="https://www.freepik.com/free-vector/chicken-and-chicks-farm-background_1137815.htm" target="_blank">Designed by Freepik</a></li>
+        <li>Corn graphic: <a href="https://www.freepik.com/free-vector/thanksgiving-flat-icons-set_820055.htm" target="_blank">Designed by Freepik</a></li>
+        <li>Egg graphic: <a href="https://www.freepik.com/free-photos-vectors/food" target="_blank">Food vector created by Ram-clotario - Freepik.com</a></li>
+        <li>Bacon graphic: <a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">Background vector created by Rawpixel.com - Freepik.com</a></li>
+      </ul>
+    <p id="data">Data Sets & Articles</p>
+    <ol>
+      <li>UN Data <a href="http://data.un.org/Data.aspx?d=FAO&f=itemCode:2044&c=2,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc&v=1" target="_blank">Production Indices for Livestock</a></li>
+      <li>OECD Data <a href="https://data.oecd.org/agroutput/meat-consumption.htm" target="_blank">Meat Consumption Data</a></li>        <li>Food and Agricultural Organization of the United Nations <a href="https://data.oecd.org/agroutput/meat-consumption.htm">Energy Use/Consumption</a></li>
+      <li><a href="https://www.researchgate.net/publication/278730159_Carbon_Footprint_of_Beef_Cattle" target="_blank">Carbon Footprint of Beef Cattle</a> authored by Raymond L. Desjardins, Devon Worth, Xavier P. C. Verge, Darrel Cerkowniak</li>
+      <li>MacLeod, M., Gerber, P., Mottet, A., Tempio, G., Falcucci, A., Opio, C., Vellinga, T., Henderson, B. & Steinfeld, H. 2013. <a href="http://www.fao.org/docrep/018/i3460e/i3460e.pdf" target="_blank">Greenhouse gas emissions from pig and chicken supply chains – A global life cycle assessment</a> Food and Agriculture Organization of the United Nations (FAO), Rome.</li>
+    </ol>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p id="credit">This webpage was created as an assignment for JOU3363 Introduction to Web Apps. <a href="https://github.com/rosmeryiza/webapps-final" target="_blank">Click here to see the GitHub repo.</a></p>
+  </footer>
+
+  <script src="js/click.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/highcharts.js"></script>
+</body>
+
+</html>
